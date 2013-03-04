@@ -2,6 +2,14 @@
 
 RSpec inspired test expectations for Erlang.
 
+There's nothing wrong with the old-school *assert* macros provided by
+[EUnit](http://erlang.org/doc/apps/eunit/chapter.html) and
+[Common Test](http://www.erlang.org/doc/apps/common_test/basics_chapter.html).
+They really are all you need. But I'm a Ruby guy and I love me some
+[RSpec](http://rspec.info/) when I'm writing Ruby tests. My brain more
+easily thinks in "should" symantics that "assert". So I wrote a bunch
+of Erlang expectations inspired by RSpec. Use them if you like
+
 ## Copyright
 
 Copyright &copy; 2013 [Jerry D'Antonio](https://twitter.com/jerrydantonio).
