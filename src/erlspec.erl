@@ -25,6 +25,5 @@ type_of(X) when is_function(X)  -> function;
 type_of(X) when is_pid(X)       -> pid;
 type_of(X) when is_port(X)      -> port;
 type_of(X) when is_reference(X) -> reference;
-type_of(X) when is_number(X)    -> number;
 type_of(X) when is_atom(X)      -> atom;
 type_of(_X)                     -> unknown.
