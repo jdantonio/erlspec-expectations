@@ -34,4 +34,16 @@ delta_macro_test() ->
       ?assert(?delta(5, -5) == 10)
       ]}.
 
+should_equal_macro_test() ->
+  {"shouldEqual/2 macro tests", [
+      ?assert(?shouldEqual(1, 1) == ok),
+      ?assertException(error, _, ?shouldEqual(1, 0))
+    ]}.
+
+should_eql_macro_test() ->
+  {"shouldEql/2 macro tests", [
+      ?assert(?shouldEql(1, 1) == ok),
+      ?assertException(error, _, ?shouldEql(1, 0))
+    ]}.
+
 -endif.
