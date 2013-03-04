@@ -3,7 +3,7 @@ require 'rake'
 require 'rake/clean'
 
 ERL = 'erl'
-APP = 'ratistics-erl'
+APP = 'erlspec'
 REBAR = './rebar'
 
 CLEAN << FileList['./ebin/*.*', './test/*.beam', './.eunit/*.beam']

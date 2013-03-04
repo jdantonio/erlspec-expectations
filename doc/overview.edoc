@@ -1,4 +1,46 @@
 @author Jerry D'Antonio <jerry.dantonio@gmail.com> [https://github.com/jdantonio/erlspec-expectations]
-@doc RSpec inspired test expectations for Erlang.
 @copyright 2013 by Jerry D'Antonio
 @version 0.0.1
+@doc RSpec inspired test expectations for Erlang.
+
+== Erlspec Expectations ==
+
+There's nothing wrong with the old-school ``assert'' macros provided by
+<a href="http://erlang.org/doc/apps/eunit/chapter.html">EUnit</a> and
+<a href="http://www.erlang.org/doc/apps/common_test/basics_chapter.html">Common Test</a>.
+They really are all you need. But I'm a Ruby guy and I love me some
+<a href="http://rspec.info/">RSpec</a> when I'm writing Ruby tests. My brain more
+easily thinks in ``should'' symantics that ``assert''. So I wrote a bunch
+of Erlang expectations inspired by RSpec. Use them if you like
+
+=== Copyright ===
+
+Copyright &#169; 2013 <a href="https://twitter.com/jerrydantonio">Jerry D'Antonio</a>.
+It is free software and may be redistributed under the terms specified in
+the LICENSE file.
+
+=== License ===
+
+Released under the MIT license.
+
+[http://www.opensource.org/licenses/mit-license.php]
+
+```
+Permission is hereby granted, free of charge, to any person obtaining a copy  
+of this software and associated documentation files (the "Software"), to deal  
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
+copies of the Software, and to permit persons to whom the Software is  
+furnished to do so, subject to the following conditions:  
+
+The above copyright notice and this permission notice shall be included in  
+all copies or substantial portions of the Software.  
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN  
+THE SOFTWARE.  
+'''
