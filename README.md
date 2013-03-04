@@ -16,6 +16,64 @@ Use [Rebar](https://github.com/basho/rebar) and add this to your *rebar.config* 
 
     {deps, [{erlspec, "0.0.*", {git, "git://github.com/jdantonio/erlspec-expectations.git", "HEAD"}}]}.
 
+## Usage
+
+Use these macros in your tests
+    
+    ?delta(5, 10) == 5
+    ?should(1 == 1)
+    ?shouldNot(1 == 0)
+    ?shouldBeTrue(true)
+    ?shouldBeFalse(false)
+    ?shouldEqual(1, 1)
+    ?shouldEql(1, 1)
+    ?shouldNotEqual(1, 0)
+    ?shouldNotEql(1, 0)
+    ?shouldBeWithin(1.00, 1.05, 0.1)
+    ?shouldBeClose(1.00, 1.05, 0.1)
+    ?shouldBeAtom(atom)
+    ?shouldNotBeAtom(0)
+    ?shouldBeBinary(<<1>>)
+    ?shouldNotBeBinary(0)
+    ?shouldBeBitstring(<<1:1>>)
+    ?shouldNotBeBitstring(0)
+    ?shouldBeBoolean(true)
+    ?shouldNotBeBoolean(0)
+    ?shouldBeBool(true)
+    ?shouldNotBeBool(0)
+    ?shouldBeFloat(1.0)
+    ?shouldNotBeFloat(0)
+    ?shouldBeFunction(fun() -> nil end)
+    ?shouldNotBeFunction(0)
+    ?shouldBeFunc(fun() -> nil end)
+    ?shouldNotBeFunc(0)
+    ?shouldBeFun(fun() -> nil end)
+    ?shouldNotBeFun(0)
+    ?shouldBeInteger(1)
+    ?shouldNotBeInteger(1.0)
+    ?shouldBeInt(1)
+    ?shouldNotBeInt(1.0)
+    ?shouldBeList([])
+    ?shouldNotBeList(0)
+    ?shouldBeNumber(1)
+    ?shouldBeNumber(1.0)
+    ?shouldNotBeNumber(nil)
+    ?shouldBeNumeric(1)
+    ?shouldBeNumeric(1.0)
+    ?shouldNotBeNumeric(nil)
+    ?shouldBePid(spawn(fun() -> nil end))
+    ?shouldNotBePid(0)
+    ?shouldBePort(Port)
+    ?shouldNotBePort(0)
+    ?shouldBeReference(make_ref())
+    ?shouldNotBeReference(0)
+    ?shouldBeRef(make_ref())
+    ?shouldNotBeRef(0)
+    ?shouldBeTuple({})
+    ?shouldNotBeTuple(0)
+    ?shouldMatch("hello world", "hello")
+    ?shouldNotMatch("hello world", "garbage")
+    
 ## Copyright
 
 Copyright &copy; 2013 [Jerry D'Antonio](https://twitter.com/jerrydantonio).
