@@ -1,10 +1,27 @@
 -ifdef(TEST).
 -include_lib("eunit/include/eunit.hrl").
 
+% https://github.com/rspec/rspec-expectations
+
+% shouldInclude
+%   shouldHave
+% shouldStartWith
+% shouldEndWith
+
 -define(delta(A, B), erlspec:delta(A, B)).
 
 -define(should(Actual), ?assert(Actual)).
--define(shouldNot(Actual), ?assert(not(Actual))).
+-define(shouldNot(Actual), ?assertNot(Actual)).
+-define(shouldRaise(ClassPattern, TermPattern, Expr), ?assertException(ClassPattern, TermPattern, Expr)).
+-define(shouldError(TermPattern, Expr), ?assertError(TermPattern, Expr)).
+-define(shouldExit(TermPattern, Expr), ?assertExit(TermPattern, Expr)).
+-define(shouldThrow(TermPattern, Expr), ?assertThrow(TermPattern, Expr)).
+
+-define(shouldBeTrue(Actual), ?assert(Actual == true)).
+-define(shouldBeFalse(Actual), ?assert(Actual == false)).
+
+-define(shouldBeWithin(Actual, Expected, Delta), ?assert(?delta(Actual, Expected) =< abs(Delta))).
+-define(shouldBeClose(Actual, Expected, Delta), ?shouldBeWithin(Actual, Expected, Delta)). 
 
 -define(shouldEqual(Actual, Expected), ?assert(Actual == Expected)).
 -define(shouldEql(Actual, Expected), ?shouldEqual(Actual, Expected)).

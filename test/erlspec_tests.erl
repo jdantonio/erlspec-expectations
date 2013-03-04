@@ -51,6 +51,46 @@ delta_macro_test() ->
       ?assert(?delta(5, -5) == 10)
       ]}.
 
+should_be_true_test() ->
+  {"shouldBeTrue/1 macro test", [
+      ?assert(?shouldBeTrue(true) == ok),
+      ?assertException(error, _, ?shouldBeTrue(false))
+      ]}.
+
+should_be_false_test() ->
+  {"shouldBeFalse/1 macro test", [
+      ?assert(?shouldBeFalse(false) == ok),
+      ?assertException(error, _, ?shouldBeFalse(true))
+      ]}.
+
+should_be_within_macro_test() ->
+  {"shouldBeWithin/3 macro test", [
+      ?assert(?shouldBeWithin(1.00, 1.05, 0.1) == ok),
+      ?assert(?shouldBeWithin(1.05, 1.00, 0.1) == ok),
+      ?assert(?shouldBeWithin(-1.00, -1.05, 0.1) == ok),
+      ?assert(?shouldBeWithin(-1.05, -1.00, 0.1) == ok),
+      ?assert(?shouldBeWithin(1.0, 1.0, 0.1) == ok),
+      ?assert(?shouldBeWithin(1, 1, 0.1) == ok),
+      ?assertException(error, _, ?shouldBeWithin(1.0, 1.5, 0.1)),
+      ?assertException(error, _, ?shouldBeWithin(1.5, 1.0, 0.1)),
+      ?assertException(error, _, ?shouldBeWithin(-1.0, -1.5, 0.1)),
+      ?assertException(error, _, ?shouldBeWithin(-1.5, -1.0, 0.1))
+      ]}.
+
+should_be_close_macro_test() ->
+  {"shouldBeClose/3 macro test", [
+      ?assert(?shouldBeClose(1.00, 1.05, 0.1) == ok),
+      ?assert(?shouldBeClose(1.05, 1.00, 0.1) == ok),
+      ?assert(?shouldBeClose(-1.00, -1.05, 0.1) == ok),
+      ?assert(?shouldBeClose(-1.05, -1.00, 0.1) == ok),
+      ?assert(?shouldBeClose(1.0, 1.0, 0.1) == ok),
+      ?assert(?shouldBeClose(1, 1, 0.1) == ok),
+      ?assertException(error, _, ?shouldBeClose(1.0, 1.5, 0.1)),
+      ?assertException(error, _, ?shouldBeClose(1.5, 1.0, 0.1)),
+      ?assertException(error, _, ?shouldBeClose(-1.0, -1.5, 0.1)),
+      ?assertException(error, _, ?shouldBeClose(-1.5, -1.0, 0.1))
+      ]}.
+
 should_macro_test() ->
   {"should/1 macro tests", [
       ?assert(?should(1 == 1) == ok),

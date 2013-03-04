@@ -6,8 +6,8 @@ ERL = 'erl'
 APP = 'ratistics-erl'
 REBAR = './rebar'
 
-CLEAN << FileList['./ebin/*.*', './test/*.beam']
-CLOBBER << FileList['./ebin/*.*', './test/*.beam']
+CLEAN << FileList['./ebin/*.*', './test/*.beam', './.eunit/*.beam']
+CLOBBER << FileList['./ebin/*.*', './test/*.beam', './.eunit/*.beam']
 
 desc 'Clean, update dependencies, compile, and run tests'
 task :build => [:clean, :update_deps, :compile, :eunit]
