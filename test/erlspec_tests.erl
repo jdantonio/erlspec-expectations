@@ -19,6 +19,24 @@ delta_function_test() ->
       ?assert(erlspec:delta(5, -5) == 10)
       ]}.
 
+type_of_test() ->
+  {"type_of/1 function tests", [
+      ?assert(erlspec:type_of(an_atom) == atom),
+      ?assert(erlspec:type_of(1) == integer),
+      ?assert(erlspec:type_of(1.0) == float),
+      ?assert(erlspec:type_of(true) == boolean),
+      ?assert(erlspec:type_of([]) == list),
+      ?assert(erlspec:type_of({}) == tuple),
+      ?assert(erlspec:type_of(<<1>>) == binary),
+      ?assert(erlspec:type_of(<<1:1>>) == bitstring),
+      ?assert(erlspec:type_of(spawn(fun() -> nil end)) == pid),
+      %?assert(erlspec:type_of(1) == port),
+      ?assert(erlspec:type_of(make_ref()) == reference),
+      %?assert(erlspec:type_of(1) == number),
+      %?assert(erlspec:type_of(1) == unknown),
+      ?assert(erlspec:type_of(fun() -> nil end) == function)
+      ]}.
+
 delta_macro_test() ->
   {"delta/2 macro tests", [
       ?assert(?delta(nil, nil) == 0),
