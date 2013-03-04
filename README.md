@@ -10,6 +10,12 @@ They really are all you need. But I'm a Ruby guy and I love me some
 easily thinks in "should" symantics that "assert". So I wrote a bunch
 of Erlang expectations inspired by RSpec. Use them if you like
 
+## Installation
+
+Use [Rebar](https://github.com/basho/rebar) and add this to your *rebar.config* file
+
+    {deps, [{erlspec, "0.0.*", {git, "git://github.com/jdantonio/erlspec-expectations.git", "HEAD"}}]}.
+
 ## Copyright
 
 Copyright &copy; 2013 [Jerry D'Antonio](https://twitter.com/jerrydantonio).
