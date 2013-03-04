@@ -32,7 +32,6 @@ type_of_test() ->
       ?assert(erlspec:type_of(spawn(fun() -> nil end)) == pid),
       ?assert(erlspec:type_of(make_ref()) == reference),
       %?assert(erlspec:type_of(1) == port),
-      %?assert(erlspec:type_of(1) == number),
       %?assert(erlspec:type_of(1) == unknown),
       ?assert(erlspec:type_of(fun() -> nil end) == function)
       ]}.
