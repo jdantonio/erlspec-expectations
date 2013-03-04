@@ -66,6 +66,7 @@
 -define(shouldBeTuple(Actual), ?assert(is_tuple(Actual) == true)).
 -define(shouldNotBeTuple(Actual), ?assert(is_tuple(Actual) == false)).
 
--define(shouldMatch(Actual, Regex), ?assert(false)).
+-define(shouldMatch(Actual, Regex), ?assert(re:run(Actual, Regex) /= nomatch)).
+-define(shouldNotMatch(Actual, Regex), ?assert(re:run(Actual, Regex) == nomatch)).
 
 -endif.

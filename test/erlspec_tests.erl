@@ -171,12 +171,12 @@ should_be_macro_test() ->
 should_match_macro_test() ->
   {"shouldMatch/2 macro tests", [
       ?assert(?shouldMatch("hello world", "hello") == ok),
-      ?assertException(error, _, ?shouldMatch("hello world, garbage"))
+      ?assertException(error, _, ?shouldMatch("hello world", "garbage"))
     ]}.
 
 should_not_match_macro_test() ->
   {"shouldNotMatch/1 macro tests", [
-      ?assert(?shouldNotMatch("hello world, garbage") == ok),
+      ?assert(?shouldNotMatch("hello world", "garbage") == ok),
       ?assertException(error, _, ?shouldNotMatch("hello world", "hello"))
     ]}.
 
