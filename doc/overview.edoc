@@ -1,0 +1,4 @@
+@author Jerry D'Antonio <jerry.dantonio@gmail.com> [https://github.com/jdantonio/erlspec-expectations]
+@doc RSpec inspired test expectations for Erlang.
+@copyright 2013 by Jerry D'Antonio
+@version 0.0.1
