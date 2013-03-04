@@ -1,4 +1,4 @@
-# Erlspec Expectations
+# Erlspec Expectations [![Build Status](https://secure.travis-ci.org/jdantonio/erlspec-expectations.png)](http://travis-ci.org/jdantonio/erlspec-expectations?branch=master)
 
 RSpec inspired test expectations for Erlang.
 
